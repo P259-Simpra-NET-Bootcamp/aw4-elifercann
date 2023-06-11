@@ -5,3 +5,10 @@ Category modeli icin dapper servis hazirlayiniz. Bu servis Dynamic Dapper reposi
 Bu servis icin standart bir controller implement ediniz.  (GetAll,GetById,Insert,Update,Delete)
 Projede kullanilan tum DI islemlerini autofac ile olacak sekilde degistiriniz. 
 TransactionReportController dapper yerine EF ile calisacak sekilde guncelleyiniz. 
+
+
+--Dapper Repositoryde eksik bırakılan tamamlandı.
+--Crud işlemleri category için dapper ile oluşturuldu.Dynamic repository ile çalışılacak hale getirldi.
+--DapperCategoryController yazıldı.
+--DI olan işlemler autoface çekildi.
+--TransactionControllerda dapper yerine Ef ile çalışacak şekilde güncellendi.

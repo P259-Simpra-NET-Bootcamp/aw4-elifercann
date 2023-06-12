@@ -1,0 +1,1055 @@
+2023-06-09 17:55:44.643 [INF] Application is starting...
+2023-06-09 17:56:18.690 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 17:56:18.695 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 17:56:18.698 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 17:56:23.472 [WRN] The 'bool' property 'IsValid' on entity type 'Account' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-09 17:56:23.481 [WRN] The 'bool' property 'IsValid' on entity type 'Customer' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-09 17:56:24.470 [INF] -------------Request-Begin------------
+2023-06-09 17:56:24.475 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction 
+QueryString:  
+Request Body: 
+2023-06-09 17:56:24.476 [INF] 
+
+2023-06-09 17:56:24.477 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":[{"accountId":2,"amount":50.00,"direction":1,"transactionDate":"2023-06-07T12:54:21.5781455","description":"string","referenceNumber":"3AC674C868","transactionCode":"WITHDRW","id":1},{"accountId":1,"amount":60.00,"direction":0,"transactionDate":"2023-06-07T12:54:41.5420046","description":"string","referenceNumber":"8EA775A284","transactionCode":"DEPOSIT","id":2}]}
+2023-06-09 17:56:24.479 [INF] -------------Request-End------------
+2023-06-09 17:56:35.570 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 17:56:35.572 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 17:56:35.573 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 17:56:35.631 [FTL] Path=/simapi/v1/TransactionReport || Method=GET || Exception=Unable to resolve service for type 'SimApi.Operation.TransactionReport.ITransactionReportEfService' while attempting to activate 'SimApi.Service.TransactionReportController'.
+2023-06-09 17:56:35.683 [ERR] An unhandled exception has occurred while executing the request.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 27594ed3-7d7e-4123-aa5c-3c91d06f9149 and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at SimApi.Service.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\ErrorHandlerMiddleware.cs:line 33
+   at SimApi.Service.Middleware.HeartBeatMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\HeartBeatMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-09 17:56:35.771 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 27594ed3-7d7e-4123-aa5c-3c91d06f9149 and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-09 17:56:35.776 [ERR] Connection id "0HMR8V6DLH5T5", Request id "0HMR8V6DLH5T5:0000000B": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 27594ed3-7d7e-4123-aa5c-3c91d06f9149 and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at SimApi.Service.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\ErrorHandlerMiddleware.cs:line 33
+   at SimApi.Service.Middleware.HeartBeatMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\HeartBeatMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-06-09 17:58:33.983 [INF] Application is starting...
+2023-06-09 17:58:46.190 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 17:58:46.194 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 17:58:46.198 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 17:58:46.381 [FTL] Path=/simapi/v1/TransactionReport || Method=GET || Exception=Unable to resolve service for type 'SimApi.Operation.TransactionReport.ITransactionReportEfService' while attempting to activate 'SimApi.Service.TransactionReportController'.
+2023-06-09 17:58:46.420 [ERR] An unhandled exception has occurred while executing the request.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 3e3f64f0-ed10-40b4-b5b1-af9262441f53 and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at SimApi.Service.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\ErrorHandlerMiddleware.cs:line 33
+   at SimApi.Service.Middleware.HeartBeatMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\HeartBeatMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-09 17:58:46.481 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 3e3f64f0-ed10-40b4-b5b1-af9262441f53 and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-09 17:58:46.491 [ERR] Connection id "0HMR8V7VT3BS2", Request id "0HMR8V7VT3BS2:00000009": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 3e3f64f0-ed10-40b4-b5b1-af9262441f53 and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at SimApi.Service.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\ErrorHandlerMiddleware.cs:line 33
+   at SimApi.Service.Middleware.HeartBeatMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\HeartBeatMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-06-09 17:59:32.292 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 17:59:32.304 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 17:59:32.305 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 17:59:32.359 [FTL] Path=/simapi/v1/TransactionReport/1 || Method=GET || Exception=Unable to resolve service for type 'SimApi.Operation.TransactionReport.ITransactionReportEfService' while attempting to activate 'SimApi.Service.TransactionReportController'.
+2023-06-09 17:59:32.391 [ERR] An unhandled exception has occurred while executing the request.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id c8f926cd-06a1-4f8b-bf3d-f89c50862fcc and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at SimApi.Service.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\ErrorHandlerMiddleware.cs:line 33
+   at SimApi.Service.Middleware.HeartBeatMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\HeartBeatMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-09 17:59:32.395 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id c8f926cd-06a1-4f8b-bf3d-f89c50862fcc and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-09 17:59:32.400 [ERR] Connection id "0HMR8V7VT3BS2", Request id "0HMR8V7VT3BS2:0000000B": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id c8f926cd-06a1-4f8b-bf3d-f89c50862fcc and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at SimApi.Service.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\ErrorHandlerMiddleware.cs:line 33
+   at SimApi.Service.Middleware.HeartBeatMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\HeartBeatMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-06-09 18:00:49.991 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 18:00:50.001 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 18:00:50.007 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 18:00:50.044 [FTL] Path=/simapi/v1/TransactionReport || Method=GET || Exception=Unable to resolve service for type 'SimApi.Operation.TransactionReport.ITransactionReportEfService' while attempting to activate 'SimApi.Service.TransactionReportController'.
+2023-06-09 18:00:50.079 [ERR] An unhandled exception has occurred while executing the request.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id fdaeef16-efa0-41b0-ac7b-fa60e8da5cfa and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at SimApi.Service.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\ErrorHandlerMiddleware.cs:line 33
+   at SimApi.Service.Middleware.HeartBeatMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\HeartBeatMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-09 18:00:50.084 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id fdaeef16-efa0-41b0-ac7b-fa60e8da5cfa and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-09 18:00:50.087 [ERR] Connection id "0HMR8V7VT3BS2", Request id "0HMR8V7VT3BS2:0000000D": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id fdaeef16-efa0-41b0-ac7b-fa60e8da5cfa and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at SimApi.Service.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\ErrorHandlerMiddleware.cs:line 33
+   at SimApi.Service.Middleware.HeartBeatMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\HeartBeatMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-06-09 18:01:05.888 [INF] Application is starting...
+2023-06-09 18:01:19.739 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 18:01:19.748 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 18:01:19.751 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 18:01:29.988 [WRN] The 'bool' property 'IsValid' on entity type 'Account' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-09 18:01:29.992 [WRN] The 'bool' property 'IsValid' on entity type 'Customer' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-09 18:02:10.241 [INF] -------------Request-Begin------------
+2023-06-09 18:02:10.243 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction 
+QueryString:  
+Request Body: 
+2023-06-09 18:02:10.244 [INF] 
+
+2023-06-09 18:02:10.245 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":[{"accountId":2,"amount":50.00,"direction":1,"transactionDate":"2023-06-07T12:54:21.5781455","description":"string","referenceNumber":"3AC674C868","transactionCode":"WITHDRW","id":1},{"accountId":1,"amount":60.00,"direction":0,"transactionDate":"2023-06-07T12:54:41.5420046","description":"string","referenceNumber":"8EA775A284","transactionCode":"DEPOSIT","id":2}]}
+2023-06-09 18:02:10.246 [INF] -------------Request-End------------
+2023-06-09 18:02:49.021 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 18:02:49.034 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 18:02:49.036 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 18:02:49.087 [FTL] Path=/simapi/v1/TransactionReport || Method=GET || Exception=Unable to resolve service for type 'SimApi.Operation.TransactionReport.ITransactionReportEfService' while attempting to activate 'SimApi.Service.TransactionReportController'.
+2023-06-09 18:02:49.122 [ERR] An unhandled exception has occurred while executing the request.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 46f31fef-6ea3-4577-813d-0b264cdb4807 and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at SimApi.Service.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\ErrorHandlerMiddleware.cs:line 33
+   at SimApi.Service.Middleware.HeartBeatMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\HeartBeatMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-09 18:02:49.166 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 46f31fef-6ea3-4577-813d-0b264cdb4807 and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-09 18:02:49.177 [ERR] Connection id "0HMR8V9D7F1EM", Request id "0HMR8V9D7F1EM:0000000B": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 46f31fef-6ea3-4577-813d-0b264cdb4807 and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at SimApi.Service.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\ErrorHandlerMiddleware.cs:line 33
+   at SimApi.Service.Middleware.HeartBeatMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\HeartBeatMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-06-09 18:03:07.881 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 18:03:07.883 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 18:03:07.885 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 18:03:07.944 [FTL] Path=/simapi/v1/TransactionReport/2 || Method=GET || Exception=Unable to resolve service for type 'SimApi.Operation.TransactionReport.ITransactionReportEfService' while attempting to activate 'SimApi.Service.TransactionReportController'.
+2023-06-09 18:03:07.971 [ERR] An unhandled exception has occurred while executing the request.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id f505dba4-efe0-4bfb-9341-3ef382defdd9 and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at SimApi.Service.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\ErrorHandlerMiddleware.cs:line 33
+   at SimApi.Service.Middleware.HeartBeatMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\HeartBeatMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-09 18:03:07.977 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id f505dba4-efe0-4bfb-9341-3ef382defdd9 and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-09 18:03:07.981 [ERR] Connection id "0HMR8V9D7F1EM", Request id "0HMR8V9D7F1EM:0000000D": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id f505dba4-efe0-4bfb-9341-3ef382defdd9 and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at SimApi.Service.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\ErrorHandlerMiddleware.cs:line 33
+   at SimApi.Service.Middleware.HeartBeatMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\HeartBeatMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-06-09 18:06:26.828 [INF] Application is starting...
+2023-06-09 18:06:35.614 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 18:06:35.621 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 18:06:35.624 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 18:06:35.785 [FTL] Path=/simapi/v1/TransactionReport || Method=GET || Exception=Unable to resolve service for type 'SimApi.Operation.TransactionReport.ITransactionReportEfService' while attempting to activate 'SimApi.Service.TransactionReportController'.
+2023-06-09 18:06:35.817 [ERR] An unhandled exception has occurred while executing the request.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 5dec2919-7d82-4748-b522-4c7bbf68a660 and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at SimApi.Service.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\ErrorHandlerMiddleware.cs:line 33
+   at SimApi.Service.Middleware.HeartBeatMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\HeartBeatMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-09 18:06:35.876 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 5dec2919-7d82-4748-b522-4c7bbf68a660 and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-09 18:06:35.888 [ERR] Connection id "0HMR8VCCSTEBB", Request id "0HMR8VCCSTEBB:00000009": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'The stream with Id 5dec2919-7d82-4748-b522-4c7bbf68a660 and Tag  is disposed.'.
+   at Microsoft.IO.RecyclableMemoryStream.ThrowDisposedException() in /_/src/RecyclableMemoryStream.cs:line 1453
+   at Microsoft.IO.RecyclableMemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count) in /_/src/RecyclableMemoryStream.cs:line 997
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at SimApi.Service.Middleware.ErrorHandlerMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\ErrorHandlerMiddleware.cs:line 33
+   at SimApi.Service.Middleware.HeartBeatMiddleware.Invoke(HttpContext context) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi\Middleware\HeartBeatMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-06-09 18:10:42.311 [INF] Application is starting...
+2023-06-09 18:10:53.746 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 18:10:53.753 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 18:10:53.756 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 18:11:02.529 [WRN] The 'bool' property 'IsValid' on entity type 'Account' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-09 18:11:02.535 [WRN] The 'bool' property 'IsValid' on entity type 'Customer' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-09 18:12:59.837 [INF] -------------Request-Begin------------
+2023-06-09 18:12:59.840 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/TransactionReport 
+QueryString:  
+Request Body: 
+2023-06-09 18:12:59.840 [INF] 
+
+2023-06-09 18:12:59.841 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/TransactionReport 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":[]}
+2023-06-09 18:12:59.843 [INF] -------------Request-End------------
+2023-06-09 18:13:20.951 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 18:13:20.953 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 18:13:20.954 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 18:13:22.371 [INF] -------------Request-Begin------------
+2023-06-09 18:13:22.375 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount 
+QueryString:  
+Request Body: 
+2023-06-09 18:13:22.377 [INF] 
+
+2023-06-09 18:13:22.377 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":[{"customerId":1,"accountNumber":100101,"name":"100101","openDate":"2023-06-07T00:00:00","balance":260.00,"isValid":true,"transactions":[],"id":1},{"customerId":2,"accountNumber":1001002,"name":"1001002-1","openDate":"2023-06-07T12:49:16.65","balance":50.00,"isValid":true,"transactions":[],"id":2},{"customerId":2,"accountNumber":1001004,"name":"1001004","openDate":"2023-06-07T14:48:27.6066667","balance":100.00,"isValid":false,"transactions":[],"id":4}]}
+2023-06-09 18:13:22.379 [INF] -------------Request-End------------
+2023-06-09 19:35:33.925 [INF] Application is starting...
+2023-06-09 19:36:04.793 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 19:36:04.798 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 19:36:04.800 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 19:36:05.762 [ERR] Insert Exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Account_Customer_CustomerId". The conflict occurred in database "simAp", table "dbo.Customer", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2848
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 581
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 452
+   at SimApi.Data.Repository.DapperAccountRepository.Insert(Account entity) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Data\Repository\Account\DapperAccountRepository.cs:line 87
+   at SimApi.Operation.DapperAccountService.Insert(AccountRequest request) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Operation\Dapper\Account\DapperAccountService.cs:line 92
+ClientConnectionId:3cf89210-b968-4e94-b2ba-3f1af5b7e84e
+Error Number:547,State:0,Class:16
+2023-06-09 19:36:05.841 [INF] -------------Request-Begin------------
+2023-06-09 19:36:05.845 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount 
+QueryString:  
+Request Body: {"accountNumber":100123,"name":"100123","openDate":"2023-06-09","balance":500}
+2023-06-09 19:36:05.846 [INF] 
+
+2023-06-09 19:36:05.848 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":false,"message":"The INSERT statement conflicted with the FOREIGN KEY constraint \"FK_Account_Customer_CustomerId\". The conflict occurred in database \"simAp\", table \"dbo.Customer\", column 'Id'.\r\nThe statement has been terminated."}
+2023-06-09 19:36:05.849 [INF] -------------Request-End------------
+2023-06-09 19:36:32.484 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 19:36:32.490 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 19:36:32.491 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 19:36:32.551 [ERR] Insert Exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Account_Customer_CustomerId". The conflict occurred in database "simAp", table "dbo.Customer", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2848
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 581
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 452
+   at SimApi.Data.Repository.DapperAccountRepository.Insert(Account entity) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Data\Repository\Account\DapperAccountRepository.cs:line 87
+   at SimApi.Operation.DapperAccountService.Insert(AccountRequest request) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Operation\Dapper\Account\DapperAccountService.cs:line 92
+ClientConnectionId:3cf89210-b968-4e94-b2ba-3f1af5b7e84e
+Error Number:547,State:0,Class:16
+2023-06-09 19:36:32.555 [INF] -------------Request-Begin------------
+2023-06-09 19:36:32.556 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount 
+QueryString:  
+Request Body: {"accountNumber":100124,"name":"100124","openDate":"2023-06-09","balance":500}
+2023-06-09 19:36:32.560 [INF] 
+
+2023-06-09 19:36:32.561 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":false,"message":"The INSERT statement conflicted with the FOREIGN KEY constraint \"FK_Account_Customer_CustomerId\". The conflict occurred in database \"simAp\", table \"dbo.Customer\", column 'Id'.\r\nThe statement has been terminated."}
+2023-06-09 19:36:32.561 [INF] -------------Request-End------------
+2023-06-09 19:37:27.088 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 19:37:27.095 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 19:37:27.100 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 19:37:30.801 [WRN] The 'bool' property 'IsValid' on entity type 'Account' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-09 19:37:30.806 [WRN] The 'bool' property 'IsValid' on entity type 'Customer' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-09 19:37:31.345 [INF] -------------Request-Begin------------
+2023-06-09 19:37:31.347 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+Request Body: {"customerNumber":100123,"firstName":"100123","lastName":"100123","dateOfBirth":"2023-06-09","accounts":[{"accountNumber":1001231,"name":"1001231","openDate":"2023-06-09","balance":1000}]}
+2023-06-09 19:37:31.350 [INF] 
+
+2023-06-09 19:37:31.352 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":null}
+2023-06-09 19:37:31.352 [INF] -------------Request-End------------
+2023-06-09 19:37:49.196 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 19:37:49.198 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 19:37:49.201 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 19:37:50.559 [ERR] Failed executing DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 30), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime2), @p4='?' (Size = 30), @p5='?' (Size = 30), @p6='?' (DbType = DateTime2), @p7='?' (Size = 30)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Customer] ([CreatedAt], [CreatedBy], [CustomerNumber], [DateOfBirth], [FirstName], [LastName], [UpdatedAt], [UpdatedBy])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id], [IsValid]
+FROM [dbo].[Customer]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-06-09 19:37:50.578 [ERR] An exception occurred in the database while saving changes for context type 'SimApi.Data.Context.SimEfDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Customer' with unique index 'IX_Customer_CustomerNumber'. The duplicate key value is (100123).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:3cf89210-b968-4e94-b2ba-3f1af5b7e84e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Customer' with unique index 'IX_Customer_CustomerNumber'. The duplicate key value is (100123).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:3cf89210-b968-4e94-b2ba-3f1af5b7e84e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2023-06-09 19:37:50.605 [ERR] Insert Exception
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Customer' with unique index 'IX_Customer_CustomerNumber'. The duplicate key value is (100123).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:3cf89210-b968-4e94-b2ba-3f1af5b7e84e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at SimApi.Data.Uow.UnitOfWork.Complete() in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Data\UnitOfWork\UnitOfWork.cs:line 41
+   at SimApi.Operation.BaseService`3.Insert(TRequest request) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Operation\Base\BaseService.cs:line 86
+2023-06-09 19:37:50.611 [INF] -------------Request-Begin------------
+2023-06-09 19:37:50.611 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+Request Body: {"customerNumber":100123,"firstName":"100123","lastName":"100123","dateOfBirth":"2023-06-09","accounts":[{"accountNumber":1001232,"name":"1001232","openDate":"2023-06-09","balance":1000}]}
+2023-06-09 19:37:50.612 [INF] 
+
+2023-06-09 19:37:50.615 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":false,"message":"An error occurred while saving the entity changes. See the inner exception for details."}
+2023-06-09 19:37:50.616 [INF] -------------Request-End------------
+2023-06-09 19:38:24.363 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 19:38:24.372 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 19:38:24.374 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 19:38:27.501 [INF] -------------Request-Begin------------
+2023-06-09 19:38:27.502 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+Request Body: {"customerNumber":100124,"firstName":"100124","lastName":"100124","dateOfBirth":"2023-06-09","accounts":[{"accountNumber":1001241,"name":"1001241","openDate":"2023-06-09","balance":1000}]}
+2023-06-09 19:38:27.504 [INF] 
+
+2023-06-09 19:38:27.505 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":null}
+2023-06-09 19:38:27.506 [INF] -------------Request-End------------
+2023-06-09 19:38:52.365 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 19:38:52.370 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 19:38:52.371 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 19:38:52.378 [INF] -------------Request-Begin------------
+2023-06-09 19:38:52.378 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+Request Body: {"customerNumber":100125,"firstName":"100125","lastName":"100125","dateOfBirth":"2023-06-09","accounts":[{"accountNumber":1001251,"name":"10012451","openDate":"2023-06-09","balance":1000}]}
+2023-06-09 19:38:52.379 [INF] 
+
+2023-06-09 19:38:52.385 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":null}
+2023-06-09 19:38:52.386 [INF] -------------Request-End------------
+2023-06-09 19:38:59.528 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 19:38:59.531 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 19:38:59.532 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 19:39:04.548 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-06-09 19:39:04.647 [INF] -------------Request-Begin------------
+2023-06-09 19:39:04.649 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+Request Body: 
+2023-06-09 19:39:04.651 [INF] 
+
+2023-06-09 19:39:04.651 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":[{"customerNumber":100123,"firstName":"100123","lastName":"100123","dateOfBirth":"2023-06-09T00:00:00","isValid":true,"accounts":[{"customerId":1,"accountNumber":1001231,"name":"1001231","openDate":"2023-06-09T00:00:00","balance":1000.00,"isValid":true,"transactions":[],"id":3}],"id":1},{"customerNumber":100124,"firstName":"100124","lastName":"100124","dateOfBirth":"2023-06-09T00:00:00","isValid":true,"accounts":[{"customerId":3,"accountNumber":1001241,"name":"1001241","openDate":"2023-06-09T00:00:00","balance":1000.00,"isValid":true,"transactions":[],"id":4}],"id":3},{"customerNumber":100125,"firstName":"100125","lastName":"100125","dateOfBirth":"2023-06-09T00:00:00","isValid":true,"accounts":[{"customerId":4,"accountNumber":1001251,"name":"10012451","openDate":"2023-06-09T00:00:00","balance":1000.00,"isValid":true,"transactions":[],"id":5}],"id":4}]}
+2023-06-09 19:39:04.653 [INF] -------------Request-End------------
+2023-06-09 19:39:31.471 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 19:39:31.473 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 19:39:31.474 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 19:39:31.487 [INF] -------------Request-Begin------------
+2023-06-09 19:39:31.490 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+Request Body: 
+2023-06-09 19:39:31.491 [INF] 
+
+2023-06-09 19:39:31.493 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":[{"customerNumber":100123,"firstName":"100123","lastName":"100123","dateOfBirth":"2023-06-09T00:00:00","isValid":true,"accounts":[{"customerId":1,"accountNumber":1001231,"name":"1001231","openDate":"2023-06-09T00:00:00","balance":1000.00,"isValid":true,"transactions":[],"id":3}],"id":1},{"customerNumber":100124,"firstName":"100124","lastName":"100124","dateOfBirth":"2023-06-09T00:00:00","isValid":true,"accounts":[{"customerId":3,"accountNumber":1001241,"name":"1001241","openDate":"2023-06-09T00:00:00","balance":1000.00,"isValid":true,"transactions":[],"id":4}],"id":3},{"customerNumber":100125,"firstName":"100125","lastName":"100125","dateOfBirth":"2023-06-09T00:00:00","isValid":true,"accounts":[{"customerId":4,"accountNumber":1001251,"name":"10012451","openDate":"2023-06-09T00:00:00","balance":1000.00,"isValid":true,"transactions":[],"id":5}],"id":4}]}
+2023-06-09 19:39:31.494 [INF] -------------Request-End------------
+2023-06-09 19:40:11.016 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 19:40:11.028 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 19:40:11.034 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 19:40:11.047 [ERR] Failed executing DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Precision = 15) (Scale = 2) (DbType = Decimal), @p2='?' (DbType = DateTime2), @p3='?' (Size = 30), @p4='?' (DbType = Int32), @p5='?' (Size = 30), @p6='?' (DbType = DateTime2), @p7='?' (DbType = DateTime2), @p8='?' (Size = 30)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Account] ([AccountNumber], [Balance], [CreatedAt], [CreatedBy], [CustomerId], [Name], [OpenDate], [UpdatedAt], [UpdatedBy])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [Id], [IsValid]
+FROM [dbo].[Account]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-06-09 19:40:11.054 [ERR] An exception occurred in the database while saving changes for context type 'SimApi.Data.Context.SimEfDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Account' with unique index 'IX_Account_AccountNumber'. The duplicate key value is (1001231).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:3cf89210-b968-4e94-b2ba-3f1af5b7e84e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Account' with unique index 'IX_Account_AccountNumber'. The duplicate key value is (1001231).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:3cf89210-b968-4e94-b2ba-3f1af5b7e84e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2023-06-09 19:40:11.085 [ERR] Insert Exception
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Account' with unique index 'IX_Account_AccountNumber'. The duplicate key value is (1001231).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:3cf89210-b968-4e94-b2ba-3f1af5b7e84e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at SimApi.Data.Uow.UnitOfWork.Complete() in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Data\UnitOfWork\UnitOfWork.cs:line 41
+   at SimApi.Operation.BaseService`3.Insert(TRequest request) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Operation\Base\BaseService.cs:line 86
+2023-06-09 19:40:11.091 [INF] -------------Request-Begin------------
+2023-06-09 19:40:11.092 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Account 
+QueryString:  
+Request Body: {"customerId":1,"accountNumber":1001231,"name":"1001231","openDate":"2023-06-09","balance":6000}
+2023-06-09 19:40:11.094 [INF] 
+
+2023-06-09 19:40:11.097 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Account 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":false,"message":"An error occurred while saving the entity changes. See the inner exception for details."}
+2023-06-09 19:40:11.098 [INF] -------------Request-End------------
+2023-06-09 19:41:07.867 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 19:41:07.874 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 19:41:07.881 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 19:41:07.889 [ERR] Failed executing DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Precision = 15) (Scale = 2) (DbType = Decimal), @p2='?' (DbType = DateTime2), @p3='?' (Size = 30), @p4='?' (DbType = Int32), @p5='?' (Size = 30), @p6='?' (DbType = DateTime2), @p7='?' (DbType = DateTime2), @p8='?' (Size = 30)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Account] ([AccountNumber], [Balance], [CreatedAt], [CreatedBy], [CustomerId], [Name], [OpenDate], [UpdatedAt], [UpdatedBy])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [Id], [IsValid]
+FROM [dbo].[Account]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-06-09 19:41:07.892 [ERR] An exception occurred in the database while saving changes for context type 'SimApi.Data.Context.SimEfDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Account' with unique index 'IX_Account_AccountNumber'. The duplicate key value is (1001251).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:3cf89210-b968-4e94-b2ba-3f1af5b7e84e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Account' with unique index 'IX_Account_AccountNumber'. The duplicate key value is (1001251).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:3cf89210-b968-4e94-b2ba-3f1af5b7e84e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2023-06-09 19:41:07.921 [ERR] Insert Exception
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Account' with unique index 'IX_Account_AccountNumber'. The duplicate key value is (1001251).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:3cf89210-b968-4e94-b2ba-3f1af5b7e84e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at SimApi.Data.Uow.UnitOfWork.Complete() in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Data\UnitOfWork\UnitOfWork.cs:line 41
+   at SimApi.Operation.BaseService`3.Insert(TRequest request) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Operation\Base\BaseService.cs:line 86
+2023-06-09 19:41:07.927 [INF] -------------Request-Begin------------
+2023-06-09 19:41:07.928 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Account 
+QueryString:  
+Request Body: {"customerId":4,"accountNumber":1001251,"name":" 1001251","openDate":"2023-06-09","balance":6000}
+2023-06-09 19:41:07.930 [INF] 
+
+2023-06-09 19:41:07.933 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Account 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":false,"message":"An error occurred while saving the entity changes. See the inner exception for details."}
+2023-06-09 19:41:07.934 [INF] -------------Request-End------------
+2023-06-09 19:41:31.530 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 19:41:31.538 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 19:41:31.538 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 19:41:36.067 [ERR] Failed executing DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Precision = 15) (Scale = 2) (DbType = Decimal), @p2='?' (DbType = DateTime2), @p3='?' (Size = 30), @p4='?' (DbType = Int32), @p5='?' (Size = 30), @p6='?' (DbType = DateTime2), @p7='?' (DbType = DateTime2), @p8='?' (Size = 30)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Account] ([AccountNumber], [Balance], [CreatedAt], [CreatedBy], [CustomerId], [Name], [OpenDate], [UpdatedAt], [UpdatedBy])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [Id], [IsValid]
+FROM [dbo].[Account]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-06-09 19:41:36.073 [ERR] An exception occurred in the database while saving changes for context type 'SimApi.Data.Context.SimEfDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Account' with unique index 'IX_Account_AccountNumber'. The duplicate key value is (1001251).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:3cf89210-b968-4e94-b2ba-3f1af5b7e84e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Account' with unique index 'IX_Account_AccountNumber'. The duplicate key value is (1001251).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:3cf89210-b968-4e94-b2ba-3f1af5b7e84e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2023-06-09 19:41:36.101 [ERR] Insert Exception
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Account' with unique index 'IX_Account_AccountNumber'. The duplicate key value is (1001251).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:3cf89210-b968-4e94-b2ba-3f1af5b7e84e
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at SimApi.Data.Uow.UnitOfWork.Complete() in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Data\UnitOfWork\UnitOfWork.cs:line 41
+   at SimApi.Operation.BaseService`3.Insert(TRequest request) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Operation\Base\BaseService.cs:line 86
+2023-06-09 19:41:48.513 [INF] -------------Request-Begin------------
+2023-06-09 19:41:48.515 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Account 
+QueryString:  
+Request Body: {"customerId":4,"accountNumber":1001251,"name":" 1001251","openDate":"2023-06-09","balance":6000}
+2023-06-09 19:41:48.516 [INF] 
+
+2023-06-09 19:41:48.518 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Account 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":false,"message":"An error occurred while saving the entity changes. See the inner exception for details."}
+2023-06-09 19:41:48.520 [INF] -------------Request-End------------
+2023-06-09 19:42:32.657 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 19:42:32.661 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 19:42:32.664 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 19:42:32.715 [INF] -------------Request-Begin------------
+2023-06-09 19:42:32.720 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount 
+QueryString:  
+Request Body: 
+2023-06-09 19:42:32.722 [INF] 
+
+2023-06-09 19:42:32.726 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":[{"customerId":1,"accountNumber":1001231,"name":"1001231","openDate":"2023-06-09T00:00:00","balance":1000.00,"isValid":true,"transactions":[],"id":3},{"customerId":3,"accountNumber":1001241,"name":"1001241","openDate":"2023-06-09T00:00:00","balance":1000.00,"isValid":true,"transactions":[],"id":4},{"customerId":4,"accountNumber":1001251,"name":"10012451","openDate":"2023-06-09T00:00:00","balance":1000.00,"isValid":true,"transactions":[],"id":5}]}
+2023-06-09 19:42:32.729 [INF] -------------Request-End------------
+2023-06-09 19:42:57.866 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 19:42:57.881 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 19:42:57.882 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 19:42:57.919 [ERR] Insert Exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Account' with unique index 'IX_Account_AccountNumber'. The duplicate key value is (1001231).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2848
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 581
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 452
+   at SimApi.Data.Repository.DapperAccountRepository.Insert(Account entity) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Data\Repository\Account\DapperAccountRepository.cs:line 87
+   at SimApi.Operation.DapperAccountService.Insert(AccountRequest request) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Operation\Dapper\Account\DapperAccountService.cs:line 92
+ClientConnectionId:3cf89210-b968-4e94-b2ba-3f1af5b7e84e
+Error Number:2601,State:1,Class:14
+2023-06-09 19:42:57.924 [INF] -------------Request-Begin------------
+2023-06-09 19:42:57.925 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount 
+QueryString:  
+Request Body: {"accountNumber":1001231,"name":"1001231","openDate":"2023-06-09","balance":400}
+2023-06-09 19:42:57.927 [INF] 
+
+2023-06-09 19:42:57.927 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":false,"message":"Cannot insert duplicate key row in object 'dbo.Account' with unique index 'IX_Account_AccountNumber'. The duplicate key value is (1001231).\r\nThe statement has been terminated."}
+2023-06-09 19:42:57.928 [INF] -------------Request-End------------
+2023-06-09 19:43:18.450 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-09 19:43:18.462 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-09 19:43:18.463 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-09 19:43:18.478 [INF] -------------Request-Begin------------
+2023-06-09 19:43:18.486 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction 
+QueryString:  
+Request Body: 
+2023-06-09 19:43:18.487 [INF] 
+
+2023-06-09 19:43:18.489 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":[]}
+2023-06-09 19:43:18.491 [INF] -------------Request-End------------

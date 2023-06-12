@@ -1,0 +1,594 @@
+2023-06-07 15:44:10.140 [INF] Application is starting...
+2023-06-07 15:44:33.536 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 15:44:33.546 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 15:44:33.550 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 15:46:06.897 [ERR] GetAll Exception
+System.InvalidOperationException: An attempt was made to use the model while it was being created. A DbContext instance cannot be used inside 'OnModelCreating' in any way that makes use of the model that is being created.
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel(Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Set[TEntity]()
+   at SimApi.Data.Repository.GenericRepository`1.GetAll() in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Data\Repository\Base\GenericRepository.cs:line 30
+   at SimApi.Operation.TransactionReportService.GetAll() in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Operation\Dapper\Transaction\TransactionReportService.cs:line 26
+2023-06-07 15:46:22.670 [INF] -------------Request-Begin------------
+2023-06-07 15:46:22.684 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/TransactionReport 
+QueryString:  
+Request Body: 
+2023-06-07 15:46:22.687 [INF] 
+
+2023-06-07 15:46:22.691 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/TransactionReport 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":false,"message":"An attempt was made to use the model while it was being created. A DbContext instance cannot be used inside 'OnModelCreating' in any way that makes use of the model that is being created.","response":null}
+2023-06-07 15:46:22.693 [INF] -------------Request-End------------
+2023-06-07 15:49:07.441 [INF] Application is starting...
+2023-06-07 15:49:59.471 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 15:49:59.485 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 15:49:59.490 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 15:50:02.143 [INF] -------------Request-Begin------------
+2023-06-07 15:50:02.147 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+Request Body: {
+  "customerNumber": 1001002,
+  "firstName": "1001002",
+  "lastName": "1001002",
+  "dateOfBirth": "2023-06-07",
+  "accounts": [
+    {
+      
+      "accountNumber": 1001002-1,
+      "name": "1001002-1",
+      "openDate": "2023-06-07T12:49:16.650Z",
+      "balance": 100
+    }
+  ]
+}
+2023-06-07 15:50:02.150 [INF] 
+
+2023-06-07 15:50:02.154 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+StatusCode: 400 
+Response Body: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-6a0bfb39b61ba73344f596001c68678e-00ae01c843e85d4b-00","errors":{"request":["The request field is required."],"$.accounts[0].accountNumber":["'-' is an invalid end of a number. Expected a delimiter. Path: $.accounts[0].accountNumber | LineNumber: 8 | BytePositionInLine: 30."]}
+2023-06-07 15:50:02.158 [INF] -------------Request-End------------
+2023-06-07 15:50:53.657 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 15:50:53.708 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 15:50:53.715 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 15:50:56.901 [INF] -------------Request-Begin------------
+2023-06-07 15:50:56.903 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+Request Body: {
+  "customerNumber": 1001002,
+  "firstName": "1001002",
+  "lastName": "1001002",
+  "dateOfBirth": "2023-06-07",
+  "accounts": [
+    {
+      
+      "accountNumber": 1001002-1,
+      "name": "1001002-1",
+      "openDate": "2023-06-07T12:49:16.650Z",
+      "balance": 100
+    }
+  ]
+}
+2023-06-07 15:50:56.906 [INF] 
+
+2023-06-07 15:50:56.912 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+StatusCode: 400 
+Response Body: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-5480b5ed59d87ce3fc5f407e31e50ac6-297e134f9fc74cb8-00","errors":{"request":["The request field is required."],"$.accounts[0].accountNumber":["'-' is an invalid end of a number. Expected a delimiter. Path: $.accounts[0].accountNumber | LineNumber: 8 | BytePositionInLine: 30."]}
+2023-06-07 15:50:56.920 [INF] -------------Request-End------------
+2023-06-07 15:51:03.249 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 15:51:03.256 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 15:51:03.263 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 15:51:23.487 [INF] -------------Request-Begin------------
+2023-06-07 15:51:23.495 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+Request Body: {
+  "customerNumber": 1001002,
+  "firstName": "1001002",
+  "lastName": "1001002",
+  "dateOfBirth": "2023-06-07",
+  "accounts": [
+    {
+      
+      "accountNumber": 1001002-1,
+      "name": "1001002-1",
+      "openDate": "2023-06-07T12:49:16.650Z",
+      "balance": 100
+    }
+  ]
+}
+2023-06-07 15:51:23.506 [INF] 
+
+2023-06-07 15:51:23.509 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+StatusCode: 400 
+Response Body: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-cbbde128e904f5baa6fd7d3156d6a6c3-49e915daef810e88-00","errors":{"request":["The request field is required."],"$.accounts[0].accountNumber":["'-' is an invalid end of a number. Expected a delimiter. Path: $.accounts[0].accountNumber | LineNumber: 8 | BytePositionInLine: 30."]}
+2023-06-07 15:51:23.515 [INF] -------------Request-End------------
+2023-06-07 15:51:42.258 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 15:51:42.276 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 15:51:42.279 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 15:51:46.234 [WRN] The 'bool' property 'IsValid' on entity type 'Account' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-07 15:51:46.248 [WRN] The 'bool' property 'IsValid' on entity type 'Customer' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-07 15:51:47.733 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-06-07 15:51:49.005 [INF] -------------Request-Begin------------
+2023-06-07 15:51:49.013 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+Request Body: 
+2023-06-07 15:51:49.017 [INF] 
+
+2023-06-07 15:51:49.023 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":[{"customerNumber":10010,"firstName":"10010","lastName":"10010","dateOfBirth":"2023-06-05T00:00:00","isValid":true,"accounts":[],"id":1}]}
+2023-06-07 15:51:49.025 [INF] -------------Request-End------------
+2023-06-07 15:52:59.012 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 15:52:59.023 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 15:52:59.029 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 15:53:02.298 [INF] -------------Request-Begin------------
+2023-06-07 15:53:02.302 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Account 
+QueryString:  
+Request Body: {"customerId":1,"accountNumber":100101,"name":"100101","openDate":"2023-06-07","balance":200}
+2023-06-07 15:53:02.309 [INF] 
+
+2023-06-07 15:53:02.312 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Account 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":null}
+2023-06-07 15:53:02.314 [INF] -------------Request-End------------
+2023-06-07 15:53:26.087 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 15:53:26.110 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 15:53:26.116 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 15:53:29.431 [INF] -------------Request-Begin------------
+2023-06-07 15:53:29.434 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+Request Body: {"customerNumber":1001002,"firstName":"1001002","lastName":"1001002","dateOfBirth":"2023-06-07","accounts":[{"accountNumber":1001002,"name":"1001002-1","openDate":"2023-06-07T12:49:16.650Z","balance":100}]}
+2023-06-07 15:53:29.469 [INF] 
+
+2023-06-07 15:53:29.472 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Customer 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":null}
+2023-06-07 15:53:29.478 [INF] -------------Request-End------------
+2023-06-07 15:54:16.377 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 15:54:16.395 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 15:54:16.420 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 15:54:22.857 [INF] -------------Request-Begin------------
+2023-06-07 15:54:22.860 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction/Withdraw 
+QueryString:  
+Request Body: {"accountId":2,"description":"string","amount":50}
+2023-06-07 15:54:22.868 [INF] 
+
+2023-06-07 15:54:22.877 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction/Withdraw 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":{"referenceNumber":"3AC674C868","id":1}}
+2023-06-07 15:54:22.882 [INF] -------------Request-End------------
+2023-06-07 15:54:37.345 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 15:54:37.348 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 15:54:37.355 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 15:54:42.215 [INF] -------------Request-Begin------------
+2023-06-07 15:54:42.222 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction/Deposit 
+QueryString:  
+Request Body: {"accountId":1,"description":"string","amount":60}
+2023-06-07 15:54:42.226 [INF] 
+
+2023-06-07 15:54:42.233 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction/Deposit 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":{"referenceNumber":"8EA775A284","id":2}}
+2023-06-07 15:54:42.242 [INF] -------------Request-End------------
+2023-06-07 15:54:56.580 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 15:54:56.585 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 15:54:56.593 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 15:54:59.659 [INF] -------------Request-Begin------------
+2023-06-07 15:54:59.666 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/TransactionReport 
+QueryString:  
+Request Body: 
+2023-06-07 15:54:59.673 [INF] 
+
+2023-06-07 15:54:59.676 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/TransactionReport 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":[]}
+2023-06-07 15:54:59.678 [INF] -------------Request-End------------
+2023-06-07 15:55:15.539 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 15:55:15.542 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 15:55:15.546 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 17:40:26.205 [INF] Application is starting...
+2023-06-07 17:40:43.087 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 17:40:43.094 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 17:40:43.099 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 17:40:56.963 [WRN] The 'bool' property 'IsValid' on entity type 'Account' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-07 17:40:56.969 [WRN] The 'bool' property 'IsValid' on entity type 'Customer' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-07 17:41:17.634 [INF] -------------Request-Begin------------
+2023-06-07 17:41:17.636 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/TransactionReport 
+QueryString:  
+Request Body: 
+2023-06-07 17:41:17.638 [INF] 
+
+2023-06-07 17:41:17.640 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/TransactionReport 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":[]}
+2023-06-07 17:41:17.642 [INF] -------------Request-End------------
+2023-06-07 17:41:40.264 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 17:41:40.271 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 17:41:40.279 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 17:41:43.131 [INF] -------------Request-Begin------------
+2023-06-07 17:41:43.133 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction 
+QueryString:  
+Request Body: 
+2023-06-07 17:41:43.137 [INF] 
+
+2023-06-07 17:41:43.138 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":[{"accountId":2,"amount":50.00,"direction":1,"transactionDate":"2023-06-07T12:54:21.5781455","description":"string","referenceNumber":"3AC674C868","transactionCode":"WITHDRW","id":1},{"accountId":1,"amount":60.00,"direction":0,"transactionDate":"2023-06-07T12:54:41.5420046","description":"string","referenceNumber":"8EA775A284","transactionCode":"DEPOSIT","id":2}]}
+2023-06-07 17:41:43.140 [INF] -------------Request-End------------
+2023-06-07 17:42:05.985 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 17:42:05.986 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 17:42:05.987 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 17:42:08.860 [INF] -------------Request-Begin------------
+2023-06-07 17:42:08.868 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction/ByReferenceNumber 
+QueryString: ?referenceNumber=3AC674C868 
+Request Body: 
+2023-06-07 17:42:08.871 [INF] 
+
+2023-06-07 17:42:08.877 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction/ByReferenceNumber 
+QueryString: ?referenceNumber=3AC674C868 
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":[{"accountId":2,"amount":50.00,"direction":1,"transactionDate":"2023-06-07T12:54:21.5781455","description":"string","referenceNumber":"3AC674C868","transactionCode":"WITHDRW","id":1}]}
+2023-06-07 17:42:08.880 [INF] -------------Request-End------------
+2023-06-07 17:42:19.375 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 17:42:19.381 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 17:42:19.384 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 17:42:21.688 [INF] -------------Request-Begin------------
+2023-06-07 17:42:21.692 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/TransactionReport/ByReferenceNumber/3AC674C868 
+QueryString:  
+Request Body: 
+2023-06-07 17:42:21.697 [INF] 
+
+2023-06-07 17:42:21.699 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/TransactionReport/ByReferenceNumber/3AC674C868 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":[]}
+2023-06-07 17:42:21.701 [INF] -------------Request-End------------
+2023-06-07 17:47:13.977 [INF] Application is starting...
+2023-06-07 17:47:25.765 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 17:47:25.778 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 17:47:25.788 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 17:47:28.926 [INF] -------------Request-Begin------------
+2023-06-07 17:47:28.929 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount 
+QueryString:  
+Request Body: 
+2023-06-07 17:47:28.931 [INF] 
+
+2023-06-07 17:47:28.933 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":[{"customerId":1,"accountNumber":100101,"name":"100101","openDate":"2023-06-07T00:00:00","balance":260.00,"isValid":true,"transactions":[],"id":1},{"customerId":2,"accountNumber":1001002,"name":"1001002-1","openDate":"2023-06-07T12:49:16.65","balance":50.00,"isValid":true,"transactions":[],"id":2}]}
+2023-06-07 17:47:28.938 [INF] -------------Request-End------------
+2023-06-07 17:48:00.834 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 17:48:00.853 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 17:48:00.859 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 17:48:02.346 [ERR] Insert Exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Account' with unique index 'IX_Account_AccountNumber'. The duplicate key value is (1001002).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2848
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 581
+   at Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 452
+   at SimApi.Data.Repository.DapperAccountRepository.Insert(Account entity) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Data\Repository\Account\DapperAccountRepository.cs:line 87
+   at SimApi.Operation.DapperAccountService.Insert(AccountRequest request) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Operation\Dapper\Account\DapperAccountService.cs:line 92
+ClientConnectionId:058ce833-248b-44c9-bed2-1fc6e6f11276
+Error Number:2601,State:1,Class:14
+2023-06-07 17:48:02.478 [INF] -------------Request-Begin------------
+2023-06-07 17:48:02.479 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount 
+QueryString:  
+Request Body: {"customerId":2,"accountNumber":1001002,"name":"1001002","openDate":"2023-06-07T14:47:38.854Z","balance":100}
+2023-06-07 17:48:02.481 [INF] 
+
+2023-06-07 17:48:02.482 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":false,"message":"Cannot insert duplicate key row in object 'dbo.Account' with unique index 'IX_Account_AccountNumber'. The duplicate key value is (1001002).\r\nThe statement has been terminated."}
+2023-06-07 17:48:02.485 [INF] -------------Request-End------------
+2023-06-07 17:48:26.236 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 17:48:26.253 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 17:48:26.256 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 17:48:27.623 [INF] -------------Request-Begin------------
+2023-06-07 17:48:27.639 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount 
+QueryString:  
+Request Body: {"customerId":2,"accountNumber":1001004,"name":"1001004","openDate":"2023-06-07T14:47:38.854Z","balance":100}
+2023-06-07 17:48:27.642 [INF] 
+
+2023-06-07 17:48:27.644 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":null}
+2023-06-07 17:48:27.648 [INF] -------------Request-End------------
+2023-06-07 17:48:43.630 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 17:48:43.632 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 17:48:43.635 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 17:48:44.811 [INF] -------------Request-Begin------------
+2023-06-07 17:48:44.827 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount/2 
+QueryString:  
+Request Body: 
+2023-06-07 17:48:44.834 [INF] 
+
+2023-06-07 17:48:44.843 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/DapperAccount/2 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":{"customerId":2,"accountNumber":1001002,"name":"1001002-1","openDate":"2023-06-07T12:49:16.65","balance":50.00,"isValid":true,"transactions":[],"id":2}}
+2023-06-07 17:48:44.852 [INF] -------------Request-End------------
+2023-06-07 17:49:55.563 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 17:49:55.578 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 17:49:55.583 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 17:49:59.611 [WRN] The 'bool' property 'IsValid' on entity type 'Account' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-07 17:49:59.622 [WRN] The 'bool' property 'IsValid' on entity type 'Customer' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead, so that the default will only be used for inserts when the property value is 'null'.
+2023-06-07 17:50:00.878 [INF] -------------Request-Begin------------
+2023-06-07 17:50:00.884 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction 
+QueryString:  
+Request Body: 
+2023-06-07 17:50:00.891 [INF] 
+
+2023-06-07 17:50:00.897 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":[{"accountId":2,"amount":50.00,"direction":1,"transactionDate":"2023-06-07T12:54:21.5781455","description":"string","referenceNumber":"3AC674C868","transactionCode":"WITHDRW","id":1},{"accountId":1,"amount":60.00,"direction":0,"transactionDate":"2023-06-07T12:54:41.5420046","description":"string","referenceNumber":"8EA775A284","transactionCode":"DEPOSIT","id":2}]}
+2023-06-07 17:50:00.906 [INF] -------------Request-End------------
+2023-06-07 17:50:15.920 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 17:50:15.937 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 17:50:15.942 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 17:50:18.448 [INF] -------------Request-Begin------------
+2023-06-07 17:50:18.451 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction/1 
+QueryString:  
+Request Body: 
+2023-06-07 17:50:18.455 [INF] 
+
+2023-06-07 17:50:18.456 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/Transaction/1 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":{"accountId":2,"amount":50.00,"direction":1,"transactionDate":"2023-06-07T12:54:21.5781455","description":"string","referenceNumber":"3AC674C868","transactionCode":"WITHDRW","id":1}}
+2023-06-07 17:50:18.478 [INF] -------------Request-End------------
+2023-06-07 17:50:29.685 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 17:50:29.690 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 17:50:29.690 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 17:50:31.425 [ERR] GetAll Exception
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at Dapper.SqlMapper.ThrowZeroRows(Row row) in /_/Dapper/SqlMapper.cs:line 1167
+   at Dapper.SqlMapper.QueryRowImpl[T](IDbConnection cnn, Row row, CommandDefinition& command, Type effectiveType) in /_/Dapper/SqlMapper.cs:line 1205
+   at Dapper.SqlMapper.QueryFirst[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 754
+   at SimApi.Data.Repository.DapperTransactionRepository.GetById(Int32 Id) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Data\Repository\Transaction\DapperTransactionRepository.cs:line 58
+   at SimApi.Operation.TransactionReportService.GetById(Int32 id) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Operation\Dapper\Transaction\TransactionReportService.cs:line 71
+2023-06-07 17:50:31.441 [INF] -------------Request-Begin------------
+2023-06-07 17:50:31.445 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/TransactionReport/1 
+QueryString:  
+Request Body: 
+2023-06-07 17:50:31.448 [INF] 
+
+2023-06-07 17:50:31.450 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/TransactionReport/1 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":false,"message":"Sequence contains no elements","response":null}
+2023-06-07 17:50:31.455 [INF] -------------Request-End------------
+2023-06-07 17:50:41.804 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 17:50:41.806 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 17:50:41.811 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 17:50:43.330 [ERR] GetAll Exception
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at Dapper.SqlMapper.ThrowZeroRows(Row row) in /_/Dapper/SqlMapper.cs:line 1167
+   at Dapper.SqlMapper.QueryRowImpl[T](IDbConnection cnn, Row row, CommandDefinition& command, Type effectiveType) in /_/Dapper/SqlMapper.cs:line 1205
+   at Dapper.SqlMapper.QueryFirst[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 754
+   at SimApi.Data.Repository.DapperTransactionRepository.GetById(Int32 Id) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Data\Repository\Transaction\DapperTransactionRepository.cs:line 58
+   at SimApi.Operation.TransactionReportService.GetById(Int32 id) in C:\Users\ercan\Downloads\pk-sim-main\SimpraBootcamp\SimApi\SimApi.Operation\Dapper\Transaction\TransactionReportService.cs:line 71
+2023-06-07 17:50:43.349 [INF] -------------Request-Begin------------
+2023-06-07 17:50:43.353 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/TransactionReport/2 
+QueryString:  
+Request Body: 
+2023-06-07 17:50:43.359 [INF] 
+
+2023-06-07 17:50:43.367 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/TransactionReport/2 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":false,"message":"Sequence contains no elements","response":null}
+2023-06-07 17:50:43.374 [INF] -------------Request-End------------
+2023-06-07 17:56:39.793 [INF] Application is starting...
+2023-06-07 17:56:52.806 [INF] LogHeartBeatMiddleware.Invoke
+2023-06-07 17:56:52.824 [INF] LogErrorHandlerMiddleware.Invoke
+2023-06-07 17:56:52.833 [INF] LogRequestLoggingMiddleware.Invoke
+2023-06-07 17:56:56.475 [INF] -------------Request-Begin------------
+2023-06-07 17:56:56.477 [INF] Http Request Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/TransactionReport/ByAccountId/2 
+QueryString:  
+Request Body: 
+2023-06-07 17:56:56.480 [INF] 
+
+2023-06-07 17:56:56.482 [INF] Http Response Information: 
+Schema:https 
+Host: localhost:7235 
+Path: /simapi/v1/TransactionReport/ByAccountId/2 
+QueryString:  
+StatusCode: 200 
+Response Body: {"success":true,"message":"Success","response":[]}
+2023-06-07 17:56:56.485 [INF] -------------Request-End------------

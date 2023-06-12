@@ -6,6 +6,7 @@ Bu servis icin standart bir controller implement ediniz.  (GetAll,GetById,Insert
 Projede kullanilan tum DI islemlerini autofac ile olacak sekilde degistiriniz. 
 TransactionReportController dapper yerine EF ile calisacak sekilde guncelleyiniz. 
 
+## SimApi projesi yanlış olarak gönderildi ödevin yapıldığı proje pk-sim projesidir.
 
 Dapper Repositoryde eksik bırakılan tamamlandı.
 
